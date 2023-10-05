@@ -1,5 +1,5 @@
 document.addEventListener('keydown', function (event) {
-  const videoPlayer = document.querySelector('video'); // Replace 'video' with the actual selector for your video element
+  const videoPlayer = document.querySelector('video'); 
 
   if (videoPlayer) {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
@@ -7,8 +7,8 @@ document.addEventListener('keydown', function (event) {
       const skipAmount = (event.key === 'ArrowRight') ? 10 : -10;
       videoPlayer.currentTime += skipAmount;
     } else if (event.key === ' ') {
-      event.preventDefault(); // Prevent default space bar functionality
-      togglePlayPause(videoPlayer); // Call the function to toggle play/pause
+      event.preventDefault(); 
+      togglePlayPause(videoPlayer); 
     }
   }
 });
@@ -16,8 +16,8 @@ document.addEventListener('keydown', function (event) {
 // Function to toggle play/pause of the video
 function togglePlayPause(videoPlayer) {
   if (videoPlayer.paused || videoPlayer.ended) {
-    videoPlayer.play(); // Play the video
+    videoPlayer.play(); 
   } else {
-    videoPlayer.pause(); // Pause the video
+    videoPlayer.pause(); 
   }
 }
